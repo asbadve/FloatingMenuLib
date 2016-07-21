@@ -1,4 +1,4 @@
-package com.ajinkyabadve.floatingmenulib.view;
+package com.ajinkyabadve.floatingmenulib.viewgroup;
 
 import android.content.Context;
 import android.content.res.TypedArray;

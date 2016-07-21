@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-import com.ajinkyabadve.floatingmenulib.view.FabView;
-import com.ajinkyabadve.floatingmenulib.view.FloatingActionMenuLayout;
+import com.ajinkyabadve.floatingmenulib.viewgroup.FabView;
+import com.ajinkyabadve.floatingmenulib.viewgroup.FloatingActionMenuLayout;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
