@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ajinkyabadve.floatingmenu.MainActivity">
+
+    <com.ajinkyabadve.floatingmenulib.view.FloatingActionMenuLayout
+        android:id="@+id/fab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.ajinkyabadve.floatingmenulib.view.FabView
+            android:id="@+id/fab_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="end" />
+
+        <com.ajinkyabadve.floatingmenulib.view.FabView
+            android:id="@+id/fab_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="end" />
+
+        <com.ajinkyabadve.floatingmenulib.view.FabView
+            android:id="@+id/fab_third"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="end" />
+
+        <com.ajinkyabadve.floatingmenulib.view.FabView
+            android:id="@+id/fab_forth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="end" />
+
+        <com.ajinkyabadve.floatingmenulib.view.FabView
+            android:id="@+id/fab_fifth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="end" />
+
+
+    </com.ajinkyabadve.floatingmenulib.view.FloatingActionMenuLayout>
+
+
+</RelativeLayout>

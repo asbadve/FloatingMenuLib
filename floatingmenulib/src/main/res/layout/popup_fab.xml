@@ -1,0 +1,115 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frameClose"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <RelativeLayout
+        android:id="@+id/fab_button_three_relative"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|end"
+        android:clipChildren="true">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_image_button_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="24dp"
+            android:visibility="visible"
+            app:fabSize="mini" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/fab_label_background"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/fab_image_button_three"
+            android:layout_toStartOf="@+id/fab_image_button_three"
+            android:text="pending Order"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fab_button_two_relative"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|end"
+        android:clipChildren="true">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_image_button_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="24dp"
+            android:visibility="visible"
+            app:fabSize="mini" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/fab_image_button_two"
+            android:layout_toStartOf="@+id/fab_image_button_two"
+            android:background="@drawable/fab_label_background"
+            android:text="Print Bill(with place order)"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fab_button_one_relative"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|end"
+        android:clipChildren="true">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_image_button_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="24dp"
+            android:visibility="visible"
+            app:fabSize="mini" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/fab_image_button_one"
+            android:layout_toStartOf="@+id/fab_image_button_one"
+            android:background="@drawable/fab_label_background"
+            android:text="Place Order(No print bill)"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:visibility="visible" />
+</FrameLayout>
