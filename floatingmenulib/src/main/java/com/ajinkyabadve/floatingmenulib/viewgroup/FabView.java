@@ -2,6 +2,7 @@ package com.ajinkyabadve.floatingmenulib.viewgroup;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.os.Build;
 import android.support.design.widget.FloatingActionButton;
 import android.util.AttributeSet;
@@ -17,6 +18,7 @@ import com.ajinkyabadve.floatingmenulib.R;
  */
 public class FabView extends LinearLayout {
     TextView mFabLabel;
+    String mLabel = null;
     FloatingActionButton mFloatingActionButton;
     private LinearLayout mMainLayout;
     private FabClickListener mFabClickListener;
@@ -48,29 +50,30 @@ public class FabView extends LinearLayout {
 
     public FabView(Context context) {
         super(context);
-        initializeViews(context);
+        initializeViews(context, null);
     }
 
     public FabView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        initializeViews(context);
+        initializeViews(context, attrs);
 
     }
 
     public FabView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        initializeViews(context);
+        initializeViews(context, attrs);
 
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public FabView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        initializeViews(context);
+        initializeViews(context, attrs);
 
     }
 
-    private void initializeViews(Context context) {
+    private void initializeViews(Context context, AttributeSet attrs) {
+        getCustomAttributes(context, attrs);
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         mMainLayout = (LinearLayout) inflater.inflate(R.layout.fab_view, this);
@@ -84,11 +87,23 @@ public class FabView extends LinearLayout {
 //        mMainLayout.setBackgroundColor(getResources().getColor(R.color.black_semi_transparent));
     }
 
+    private void getCustomAttributes(Context context, AttributeSet attrs) {
+        if (attrs == null) {
+            return;
+        }
+        TypedArray a = context.obtainStyledAttributes(attrs,
+                R.styleable.FabView, 0, 0);
+        mLabel = a.getString(R.styleable.FabView_fab_label);
+    }
+
 
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
         mFabLabel = (TextView) this.findViewById(R.id.fab_label);
+        if (null != mLabel) {
+            mFabLabel.setText(mLabel);
+        }
         mFabLabel.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {

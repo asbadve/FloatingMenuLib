@@ -5,4 +5,10 @@
         <attr name="count_submenu" format="integer" />
     </declare-styleable>
 
+    <declare-styleable name="FabView">
+        <attr name="fab_label" format="string" />
+    </declare-styleable>
+
+
+
 </resources>
