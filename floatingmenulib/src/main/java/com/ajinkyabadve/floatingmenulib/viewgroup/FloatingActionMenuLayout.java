@@ -3,6 +3,7 @@ package com.ajinkyabadve.floatingmenulib.viewgroup;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -64,22 +65,9 @@ public class FloatingActionMenuLayout extends FrameLayout {
         LayoutInflater layoutInflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         mMainLayout = inflate(getContext(), R.layout.floating_menu, this);
         mainFloatingActionButton = (FloatingActionButton) findViewById(R.id.fab_main_button);
-        for (int i = 0; i < countSubMenu; i++) {
-            //create submenu
-        }
-
-        for (int index = 0; index < ((ViewGroup) mMainLayout).getChildCount(); ++index) {
-            View nextChild = ((ViewGroup) mMainLayout).getChildAt(index);
-        }
-
         mainFloatingActionButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-//                int size = views.size();
-//                for (int i = 0; i < size; i++) {
-//                    View view1 = views.get(i);
-//                    Log.d(TAG, "onClick: id" + view1.getId());
-//                }
                 mFabMenuClickListener.onFabClick(view, !FabFlag);
                 if (!FabFlag) {
                     showFabMenu();
@@ -97,6 +85,8 @@ public class FloatingActionMenuLayout extends FrameLayout {
 
     public void hideFabMenu() {
         FabFlag = false;
+        mMainLayout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.white));
+
         int size = views.size();
         for (int i = 0; i < size; i++) {
             View view = views.get(i);
@@ -111,6 +101,7 @@ public class FloatingActionMenuLayout extends FrameLayout {
 
     public void showFabMenu() {
         FabFlag = true;
+        mMainLayout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.black_semi_transparent));
         int size = views.size();
         for (int i = 0; i < size; i++) {
             View view = views.get(i);
