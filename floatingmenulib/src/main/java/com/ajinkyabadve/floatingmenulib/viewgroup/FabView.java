@@ -6,12 +6,17 @@ import android.content.res.TypedArray;
 import android.os.Build;
 import android.support.design.widget.FloatingActionButton;
 import android.util.AttributeSet;
+import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.ajinkyabadve.floatingmenulib.R;
+import com.ajinkyabadve.floatingmenulib.util.Util;
 
 /**
  * Created by Ajinkya on 21/07/2016.
@@ -77,14 +82,11 @@ public class FabView extends LinearLayout {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         mMainLayout = (LinearLayout) inflater.inflate(R.layout.fab_view, this);
-//        int height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 56, getResources().getDisplayMetrics());
-//        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-//                ViewGroup.LayoutParams.MATCH_PARENT, height);
-//        int bottomMargin = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 16, getResources().getDisplayMetrics());
-//        params.bottomMargin = bottomMargin;
-////        params.gravity = Gravity.END;
+//        mMainLayout.setGravity(Gravity.END);
+
+//        android:layout_marginRight="8dp"
+//        android:layout_marginBottom="8dp"
 //        mMainLayout.setLayoutParams(params);
-//        mMainLayout.setBackgroundColor(getResources().getColor(R.color.black_semi_transparent));
     }
 
     private void getCustomAttributes(Context context, AttributeSet attrs) {

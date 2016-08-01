@@ -17,35 +17,39 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:gravity="end"
-            app:fab_label="test" />
+            app:fab_label="5" />
 
         <com.ajinkyabadve.floatingmenulib.viewgroup.FabView
             android:id="@+id/fab_second"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:gravity="end" />
+            android:gravity="end"
+            app:fab_label="4" />
 
         <com.ajinkyabadve.floatingmenulib.viewgroup.FabView
             android:id="@+id/fab_third"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:gravity="end" />
+            android:gravity="end"
+            app:fab_label="3" />
 
         <com.ajinkyabadve.floatingmenulib.viewgroup.FabView
             android:id="@+id/fab_forth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:gravity="end" />
+            android:gravity="end"
+            app:fab_label="2" />
 
         <com.ajinkyabadve.floatingmenulib.viewgroup.FabView
             android:id="@+id/fab_fifth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:gravity="end" />
+            android:gravity="end"
+            app:fab_label="1" />
 
 
     </com.ajinkyabadve.floatingmenulib.viewgroup.FloatingActionMenuLayout>

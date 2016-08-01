@@ -6,8 +6,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center|end"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginEnd="29dp"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="29dp"
         android:layout_toLeftOf="@+id/fab_image_button_two"
         android:layout_toStartOf="@+id/fab_image_button_two"
         android:background="@drawable/fab_label_background"
@@ -21,10 +22,11 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerInParent="true"
-        android:layout_gravity="center|end"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        app:fabSize="mini" />
+        android:layout_gravity="center"
+        android:layout_marginEnd="14.5dp"
+        android:layout_marginRight="14.5dp"
+        app:fabSize="mini"
+        app:useCompatPadding="true" />
 
 
 </merge>
